@@ -1,6 +1,6 @@
 # Colton Curtis's Portfolio Website
 
-## Crafting a Dynamic Portfolio Platform
+## Crafting a Portfolio Platform
 Welcome to the portfolio website of a talented individual whose skills span across engineering, development, and design domains. This repository houses the codebase for a meticulously crafted platform that serves as a testament to the creator's expertise and creativity.
 
 ## Overview
