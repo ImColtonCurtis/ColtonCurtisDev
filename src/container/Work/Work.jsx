@@ -96,6 +96,7 @@ const Work = ({ toggleModal, modal }) => {
   const [selectedGame, setSelectedGame] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [intervalId, setIntervalId] = useState(null);
+  const [videoPaused, setVideoPaused] = useState({}); // state to manage video pause/play
 
   const containerRef = useRef(null);
   const dragStartX = useRef(null);
@@ -112,6 +113,20 @@ const Work = ({ toggleModal, modal }) => {
     }
     setActiveIndex(0);
   }, [selectedPlatform]);
+
+  useEffect(() => {
+    // Pause all videos first
+    const newVideoPaused = {};
+    filterWork.forEach(work => {
+      newVideoPaused[work.title] = true;
+    });
+  
+    // Play the video of the active work item
+    if (filterWork.length > 0) {
+      newVideoPaused[filterWork[activeIndex].title] = false;
+    }
+    setVideoPaused(newVideoPaused);
+  }, [activeIndex, filterWork]);
 
   const handleWorkFilter = useCallback((item) => {
     setSelectedPlatform((prevSelectedPlatform) => {
@@ -363,7 +378,7 @@ const Work = ({ toggleModal, modal }) => {
               <video
                 ref={(el) => (videoRefs.current[work.title] = el)}
                 src={work.vidURL}
-                autoPlay
+                autoPlay={!videoPaused[work.title]}
                 loop
                 muted
                 playsInline
@@ -372,7 +387,7 @@ const Work = ({ toggleModal, modal }) => {
               />
               <video
                 src={work.vidURL}
-                autoPlay
+                autoPlay={!videoPaused[work.title]} 
                 loop
                 muted
                 playsInline
