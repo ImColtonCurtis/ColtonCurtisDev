@@ -126,7 +126,7 @@ const Navbar = ({ currentPage, modal }) => {
         {['home', 'work', 'about', 'contact'].map((item) => (
           <li className="app__flex p-text" key={`link-${item}`}>
             <div />
-            {location.pathname === '/' ? (
+            {location.pathname === '/ColtonCurtisDev' ? (
               <ScrollLink
                 to={item === 'home' ? 'home' : item.toLowerCase()}
                 onClick={() => handleLinkClick(item.toLowerCase())}
@@ -138,7 +138,7 @@ const Navbar = ({ currentPage, modal }) => {
               </ScrollLink>
             ) : (
               <RouterLink
-                to={{ pathname: '/', hash: `#${item.toLowerCase()}` }}
+                to={{ pathname: '/ColtonCurtisDev', hash: `#${item.toLowerCase()}` }}
                 className="scroll-link"
                 onClick={() => handleLinkClick(item.toLowerCase())}
               >
@@ -171,7 +171,7 @@ const Navbar = ({ currentPage, modal }) => {
             <ul>
             {['home', 'work', 'about', 'contact'].map((item, index) => (
                 <motion.li key={item} className={listClass}>
-                  {location.pathname === '/' ? (
+                  {location.pathname === '/ColtonCurtisDev' ? (
                     <ScrollLink
                       to={item === 'home' ? 'home' : item.toLowerCase()}
                       onClick={() => handleLinkClick(item.toLowerCase())}
