@@ -1,0 +1,337 @@
+.app__contact {
+  //background-color: var(--darkGrey-color);
+  z-index: 0;
+  padding-top: 0.75rem;
+  flex-direction: column;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+
+  @media screen and (max-width: 600px) {    
+  padding-top: 0.5rem;
+  }
+
+  .app__contact-headers {
+    width: auto;
+    height: auto;
+    min-width: 500px;
+    max-height: 97svh;
+    max-width: 520px;  
+    padding: 0rem 1.8rem;    
+    z-index: 10;
+    
+    @media screen and (max-width: 950px) {
+      margin-top: -2.1rem;
+    }
+  
+    @media screen and (max-width: 450px) {
+      min-width: 450px;
+    }
+
+    @media screen and (max-width: 400px) {
+      min-width: 400px;
+    }
+
+    @media screen and (max-width: 350px) {
+      min-width: 350px;
+    }
+
+    @media screen and (max-width: 300px) {
+      min-width: 300px;
+    }
+
+    @media screen and (max-width: 250px) {
+      min-width: 250px;
+    }
+
+    .secondTitle {
+      padding-top: 0.5rem;
+      font-size: 1.5rem;
+      color: var(--white-color);
+      text-shadow: 0.25px 0.5px 2px rgba(0, 0, 0, 0.4);
+      margin-bottom: 0.2rem;
+
+      @media screen and (min-width: 2000px) {
+        font-size: calc(1.5rem * 1.15);  
+      }
+
+      @media screen and (max-width: 950px) {          
+        margin-top: 1rem;
+      }
+
+      @media screen and (max-width: 600px) {
+        font-size: calc(1.5rem * 0.85);  
+      }
+      
+      @media screen and (max-width: 450px) {
+        font-size: calc(1.5rem * 0.5);
+      }
+
+      @media screen and (max-width: 300px) {
+        font-size: 1rem;
+      }
+    }
+    
+    .app__contact-EmailButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      text-decoration: none; // Remove underline
+      color: var(--white-color);
+      text-shadow: 0.25px 0.5px 2px rgba(0, 0, 0, 0.4);
+      border: none;                
+      border-radius: 0.25rem; // adjust as needed
+      padding-bottom: 0.5rem;
+      cursor: pointer;
+      font-size: 1.25rem; // adjust as needed
+      font-weight: 500;
+    
+      backdrop-filter: blur(3px);
+    
+      // Set a fixed width for the button
+      width: fit-content; // Adjust as needed
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+        //background-color: rgba(175, 175, 175, 0.25);
+        //box-shadow: 0.25rem 0.25rem 6px rgba(0, 0, 0, 0.5);
+        text-decoration: underline; // Add underline on hover
+      }
+    
+      .button-logo {
+          max-width: 30px; // adjust as needed
+          margin-right: 13px; // adjust as needed
+          filter: drop-shadow(0.25px 0.5px 2px rgba(0,0,0,0.4));          
+          
+          @media screen and (max-width: 450px) {            
+            max-width: 25px; // adjust as needed
+          }
+      }
+
+      @media screen and (min-width: 2000px) {
+        font-size: calc(1.25rem * 1.15);  
+      }
+
+      @media screen and (max-width: 650px) {
+        padding-bottom: 0.5rem;
+      }
+      
+      @media screen and (max-width: 450px) {
+        font-size: calc(1.25rem * 0.85);
+      }
+
+      @media screen and (max-width: 350px) {
+        font-size: calc(1.25rem * 0.85);
+      }
+    }
+  }
+
+  .app__contact-container {
+    display: flex;
+    position: relative;
+    width: auto;
+    height: auto;
+    max-height: 97svh;
+    max-width: 99vw;  
+    padding: 0.7rem 1.8rem;       
+    padding-top: 0.2rem;
+    margin-bottom: 0.7rem;
+    z-index: 10;
+  
+    background-color: var(--offBlackGlass-color);
+  
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0.1rem 0.1rem 6px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+  
+    @media screen and (max-width: 1000px) {
+      max-height: 97.7svh;
+  
+      padding: 0.75rem 1.8rem;    
+      padding-top: 0.2rem;
+    }
+  
+    @media screen and (max-width: 450px) {
+      padding: 0.75rem 1.05rem;    
+      padding-top: 0.2rem;
+    }
+  
+    @media screen and (max-height: 450px) {
+      padding-bottom: 1.2rem;
+    }
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.035);
+      box-shadow: 0.05rem 0.05rem 9px rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  // Add styles for contact me box
+  .app__contact-box {
+    padding-top: 0.05rem;
+    padding-bottom: 0.05rem;
+    flex-direction: column;
+    width: 100%;
+
+    h1 {
+      color: white;
+      text-shadow: 0.25px 0.5px 2px rgba(0, 0, 0, 0.4);
+      margin-top: 0.3rem;
+      margin-bottom: 0.25rem;
+      margin-left: 0.3rem;
+      font-size: 1rem;
+
+      @media screen and (max-width: 450px) {
+        margin-bottom: 0.5rem;
+      }
+
+      @media screen and (max-height: 450px) {
+        margin-top: 1.2rem;
+      }
+    }      
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+      color: white;
+      text-shadow: 0.25px 0.5px 2px rgba(0, 0, 0, 0.4);
+      opacity: 1;
+
+      font-size: 1rem;
+      font-weight: bold;
+      background: none;
+      backdrop-filter: blur(3.5px);
+
+      border: 2px solid white; // Replace with your desired border color
+      border-color: white;
+
+      border-radius: 0.25rem;
+
+      outline: none;
+      font-family: var(--font-base);    
+      
+      transition: all 0.3s ease-in-out;
+     // z-index: 1;
+
+      &:hover {
+        box-shadow: 0.25rem 0.25rem 6px rgba(0, 0, 0, 0.5);
+        transform: scale(1.035);
+        z-index: 2;
+      }
+    }
+
+    .input-row {
+      position: relative;
+      gap: 1rem;
+      width: 100%;
+      display: flex; // Ensure the inputs are displayed in a row
+
+      .name-input {
+        border-radius: 0.75rem 0.25rem 0.25rem 0.25rem;
+        width: 48%;
+        max-width: 100%;
+      }
+
+      .email-input{
+        border-radius: 0.25rem 0.75rem 0.25rem 0.25rem;
+        width: 48%;
+        max-width: 100%;
+      }
+    }
+
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+      color: white;
+      text-shadow: 0.25px 0.5px 2px rgba(0, 0, 0, 0.4);
+      opacity: 1;
+    
+      font-size: 1rem;
+      font-weight: bold;
+      background: none;
+      backdrop-filter: blur(3.5px);
+    
+      border: 2px solid white; // Replace with your desired border color
+      border-color: white;
+    
+      border-radius: 0.25rem;
+    
+      min-height: 3.5rem; // Set a minimum height
+      max-height: 5 * 1.5rem; // Set a maximum height (5 lines)
+    
+      outline: none;
+      font-family: var(--font-base);
+
+      transition: all 0.3s ease-in-out;
+    //  z-index: 1;
+
+      &:hover {
+        transform: scale(1.035);
+        box-shadow: 0.25rem 0.25rem 6px rgba(0, 0, 0, 0.5);
+        z-index: 2;
+      }
+    }
+    
+    .message-input {
+      border-radius: 0.25rem 0.25rem 0.75rem 0.75rem;
+      resize: none;
+      height: auto; // Allow the textarea to automatically adjust its height
+    
+      &:focus {
+        overflow-y: auto;
+      }       
+    }
+    
+
+    button {
+      margin-left: 0.3rem;
+      margin-top: 0.25rem;
+      padding: 0.5rem 0.75rem;
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(2px);
+
+      color: var(--white-color);
+      font-size: 0.9rem;
+      font-weight: bold;
+      text-shadow: 0.25px 0.5px 2px rgba(0, 0, 0, 0.4);
+      outline: none; // Add this line to remove the outline            
+      border: 1px solid white; // Replace with your desired border color
+      cursor: not-allowed; // Default to not-allowed
+      transition: all 0.3s ease-in-out; // Smooth transition for background color
+      font-family: var(--font-base);
+      border-radius: 0.35rem;
+
+      &[data-valid="true"] {
+        cursor: pointer;
+      }
+      transition: all 0.3s ease-in-out;
+     // z-index: 1;
+
+      &:hover {
+        transform: scale(1.05);
+   //     z-index: 2;
+        box-shadow: 0.25rem 0.25rem 6px rgba(0, 0, 0, 0.5);
+        &[data-valid="true"] {
+          background-color: rgba(255, 0, 0, 0.75);
+        }
+      }
+    }
+  }
+
+  // Add styles for Submitted message
+  .form-submitted-message {
+    margin-top: 1rem;
+    color: var(--white-color);
+    text-shadow: 0.25px 0.5px 2px rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+  }
+}

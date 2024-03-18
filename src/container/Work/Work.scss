@@ -1,0 +1,783 @@
+@keyframes work-title-background-pan {
+  from {
+      background-position: 0% center;
+  }
+
+  to {
+      background-position: -200% center;
+  }
+}
+
+.app__works {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;  
+  overflow-x: hidden; /* Enable horizontal scrolling if needed */
+  padding-top: 0rem;
+  padding-bottom: 1.25rem;
+  z-index: 12;
+
+  .app__work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
+    padding-bottom: 0.125rem;
+
+    @media screen and (max-width: 1050px) {
+      margin-bottom: 0rem;
+    }
+
+    .header-text {
+      font-size: 1.4rem;
+      color: var(--white-color);
+      text-shadow: 0.25px 0.5px 2px rgba(0, 0, 0, 0.4);
+      text-transform: capitalize;
+      margin-right: 1rem;
+    }
+  }
+
+  .app__work-portfolio {
+    display: flex;
+    scroll-snap-type: x mandatory; /* Snap to each item */
+    white-space: nowrap; /* Prevent line breaks */
+    margin: 0; /* Negative margin to counteract margin applied to items */
+    padding: 1.15rem; /* Padding to space out items from the edges */
+    padding-left: 0rem;
+    padding-right: 0rem;
+
+    @media screen and (max-width: 800px) {
+      padding-bottom: 0.85rem; /* Padding to space out items from the edges */
+    }
+
+    @media screen and (max-width: 650px) {
+      padding-bottom: 0.25rem; /* Padding to space out items from the edges */
+    }
+
+    @media screen and (max-width: 500px) {
+      padding-bottom: 0.2rem; /* Padding to space out items from the edges */
+    }
+
+    @media screen and (max-width: 450px) {
+      padding-bottom: 0.1rem; /* Padding to space out items from the edges */
+    }
+
+    @media screen and (max-width: 350px) {
+      padding-bottom: 0rem; /* Padding to space out items from the edges */
+    }
+
+    .app__work-item {
+      width: 100%; // Adjusted width to 100%
+      max-width: 800px; // Added max-width to maintain a reasonable width
+      height: auto;
+      aspect-ratio: 3/1.65;
+      flex-direction: row;
+      flex-shrink: 0; /* Prevent items from shrinking */
+      scroll-snap-align: center; /* Center each item when snapping */
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+      
+      background-color: var(--offBlackGlass-color);
+
+      margin: 0rem;
+      //margin-right: 3.3rem;
+      margin-bottom: 1.15rem;
+      margin-top: 0.6rem;
+      border-radius: 0.95rem;
+      color: #000;
+
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      @media screen and (max-width: 1050px) {
+        max-width: 650px; // Added max-width to maintain a reasonable width
+      }
+
+      @media screen and (max-width: 800px) {
+        max-width: 550px; // Added max-width to maintain a reasonable width
+      }
+
+      @media screen and (max-width: 650px) {
+        max-width: 450px; // Added max-width to maintain a reasonable width
+      }
+
+      @media screen and (max-width: 500px) {
+        max-width: 400px; // Added max-width to maintain a reasonable width
+      }
+
+      @media screen and (max-width: 450px) {
+        max-width: 350px; // Added max-width to maintain a reasonable width
+      }
+
+      @media screen and (max-width: 350px) {
+        max-width: 300px; // Added max-width to maintain a reasonable width
+      }
+
+      @media screen and (max-width: 320px) {
+        max-width: 275px; // Added max-width to maintain a reasonable width
+      }
+
+      &.hover-active {        
+        border-radius: 1.75rem;
+        // Styles for hover when modal is active (makes the element [bounce] when clicked)
+        transform: scale(1.1);
+      }
+
+      .app__work-vid {
+        width: 50%;
+        height: auto;    
+        padding: 1rem;
+        padding-left: 2rem;
+        position: relative;
+
+        @media screen and (max-width: 1050px) {
+          width: 50%;
+        }
+  
+        @media screen and (max-width: 800px) {
+          width: 50%;
+        }
+  
+        @media screen and (max-width: 650px) {
+           width: 50%;
+        }
+  
+        @media screen and (max-width: 500px) {
+          width: 50%;
+        }
+  
+        @media screen and (max-width: 450px) {
+          width: 50%;
+        }
+  
+        @media screen and (max-width: 350px) {
+          width: 50%;
+        }    
+
+        .app__work-main-video {
+          width: 100%;
+          height: 100%;
+          border-radius: 1.6rem;
+          box-shadow: 0.1rem 0.1rem 6px rgba(0, 0, 0, 0.5);
+          //border: 1px solid rgba(255, 255, 255, 0.1);
+          object-fit: cover;
+          z-index: 2;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            border-radius: 1.6rem;
+          }
+        }
+
+        .app__work-ambient-video {
+          position: absolute;
+          align-self: center;
+          object-fit: cover;
+          filter: blur(100px);
+          width: 130%;
+          opacity: 0.5;
+          z-index: 1;
+        }
+
+        &.hover-active {
+          // Styles for hover when modal is active          
+          border-radius: 1.6rem;
+          transform: scale(1.1);
+        }
+      
+        &:not(:hover):not(.active) {
+          transition: box-shadow 0.3s ease-in-out, z-index ease-in-out 0.3s, transform 0.3s ease-in-out; // Add delay to transform
+          box-shadow: 0 0 25px rgba(0, 0, 0, 0);
+          border-radius: 1.6rem;
+          z-index: 1;
+          transform: scale(1); // You can set the default scale here
+      
+          &:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-radius: 1.6rem;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+
+        &:hover {
+          border-radius: 1.6rem;
+        }
+      }
+
+      .app__work-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        box-sizing: border-box; // Add this line
+        padding-right: 1.4rem;
+        height: 100%;
+
+        @media screen and (max-width: 500px) {
+          padding: 0rem;
+          padding-right: 1rem;
+          padding-bottom: 0.5rem;
+        }
+  
+        @media screen and (max-width: 450px) {
+          padding: 0rem;
+          padding-right: 1rem;
+          padding-bottom: 0.5rem;
+        }
+  
+        @media screen and (max-width: 350px) {
+          padding: 0rem;
+          padding-right: 1rem;
+          padding-bottom: 0.5rem;
+        }
+
+        .title-container {
+          display: flex;
+          align-items: center; // Center items vertically
+          margin-top: 2.1rem;
+
+          @media screen and (min-width: 2000px) {
+            margin-top: 2.6rem;
+          }
+
+          @media screen and (max-width: 1050px) {
+            margin-top: 2.15rem;
+          }
+    
+          @media screen and (max-width: 800px) {
+            margin-top: 1.75rem;
+          }
+    
+          @media screen and (max-width: 650px) {
+            margin-top: 1.5rem;
+          }
+    
+          @media screen and (max-width: 500px) {
+            margin-top: 2.1rem;
+          }
+    
+          @media screen and (max-width: 450px) {
+            margin-top: 2.1rem;
+          }
+    
+          @media screen and (max-width: 350px) {
+            margin-top: 2.1rem;
+          }
+
+          h3 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            color: var(--white-color);
+            margin-right: 0.55rem; // Adjust the margin as needed            
+            text-decoration: none;            
+            transition: all 0.3s ease-in-out; // Smooth transition for the underline effect
+
+            animation: work-title-background-pan 2s linear infinite;
+            // set up a color source from somewhere
+            background: linear-gradient(
+              to right,
+              rgb(217, 255, 0),
+              rgb(255, 166, 0),
+              rgb(112, 250, 0),
+              rgb(217, 255, 0)
+            );
+            background-size: 200%;
+            -webkit-background-clip: text;
+            background-clip: text; /* Standard property for compatibility */
+            -webkit-text-fill-color: transparent;
+
+            @media screen and (max-width: 1050px) {
+              font-size: 1.75rem;
+            }
+      
+            @media screen and (max-width: 800px) {
+              font-size: 1.4rem;
+            }
+      
+            @media screen and (max-width: 650px) {
+              font-size: 1.1rem;
+            }
+      
+            @media screen and (max-width: 500px) {
+              font-size: 1.05rem;              
+              margin-right: 0.45rem; // Adjust the margin as needed  
+            }
+      
+            @media screen and (max-width: 450px) {
+              font-size: 0.95rem;              
+              margin-right: 0.45rem; // Adjust the margin as needed  
+            }
+      
+            @media screen and (max-width: 350px) {
+              font-size: 0.8rem;              
+              margin-right: 0.35rem; // Adjust the margin as needed  
+            }           
+          }
+
+          .choo-mainTitle-text {
+            background: linear-gradient(
+              to right,
+              rgb(255, 142, 255),
+              rgb(71, 255, 178),
+              rgb(196, 133, 255),
+              rgb(255, 142, 255),
+            );
+            background-size: 200%;
+            -webkit-background-clip: text;
+            background-clip: text; /* Standard property for compatibility */
+            -webkit-text-fill-color: transparent;
+          }
+
+          .coltonCurtisDev-mainTitle-text {
+            background: linear-gradient(
+              to right,
+              rgb(153, 116, 255),
+              rgb(238, 238, 238),
+              rgb(84, 192, 241),
+              rgb(153, 116, 255),
+            );
+            background-size: 200%;
+            -webkit-background-clip: text;
+            background-clip: text; /* Standard property for compatibility */
+            -webkit-text-fill-color: transparent;
+          }
+        
+          .crab-mainTitle-text {
+            background: linear-gradient(
+              to right,
+              rgb(255, 22, 22),
+              rgb(255, 150, 137),
+              rgb(255, 231, 166),
+              rgb(255, 22, 22),
+            );
+            background-size: 200%;
+            -webkit-background-clip: text;
+            background-clip: text; /* Standard property for compatibility */
+            -webkit-text-fill-color: transparent;
+          }
+        
+          .ding-mainTitle-text {
+            background: linear-gradient(
+              to right,
+              rgb(235, 235, 235),
+              rgb(92, 92, 92),
+              rgb(255, 230, 254),
+              rgb(235, 235, 235),
+            );
+            background-size: 200%;
+            -webkit-background-clip: text;
+            background-clip: text; /* Standard property for compatibility */
+            -webkit-text-fill-color: transparent;
+          }
+        
+          .drop-mainTitle-text {
+            background: linear-gradient(
+              to right,
+              rgb(1, 225, 255),
+              #ffc65c,
+              rgb(243, 243, 245),
+              rgb(1, 225, 255),
+            );
+            background-size: 200%;
+            -webkit-background-clip: text;
+            background-clip: text; /* Standard property for compatibility */
+            -webkit-text-fill-color: transparent;
+          }
+        
+          .flap-mainTitle-text {
+            background: linear-gradient(
+              to right,
+              rgb(255, 163, 227),
+              rgb(255, 252, 95),
+              rgb(255, 163, 227),
+            );
+            background-size: 200%;
+            -webkit-background-clip: text;
+            background-clip: text; /* Standard property for compatibility */
+            -webkit-text-fill-color: transparent;
+          }
+        
+          .letsGetHigh-mainTitle-text {
+            background: linear-gradient(
+                to right,
+                rgb(153, 116, 255),
+                rgb(238, 238, 238),
+                rgb(84, 192, 241),
+                rgb(153, 116, 255),
+              );
+              background-size: 200%;
+              -webkit-background-clip: text;
+              background-clip: text; /* Standard property for compatibility */
+              -webkit-text-fill-color: transparent;
+          }
+        
+          .paperPlanes-mainTitle-text {
+            background: linear-gradient(
+                to right,
+                rgb(89, 138, 245),
+                rgb(105, 213, 255),
+                rgb(255, 145, 71),
+                rgb(89, 138, 245),
+              );
+              background-size: 200%;
+              -webkit-background-clip: text;
+              background-clip: text; /* Standard property for compatibility */
+              -webkit-text-fill-color: transparent;
+          }
+  
+          .arrow-icon {
+            width: 18px; // Adjust the width as needed
+            height: auto; // Adjust the height as needed
+            // Add any other styles for the icon
+            margin-bottom: 0.15rem;
+            vertical-align: middle; // Align the icon vertically in the middle of the line
+
+            img {
+              border-bottom: 0; // Initially, no underline
+              transition: border-bottom 0.3s ease-in-out; // Smooth transition for the underline effect
+            }
+            @media screen and (max-width: 1050px) {
+              width: 18px;
+              margin-bottom: 0.15rem;
+            }
+      
+            @media screen and (max-width: 800px) {
+              width: 18px;
+              margin-bottom: 0.15rem;
+            }
+      
+            @media screen and (max-width: 650px) {
+              width: 14px;
+              margin-bottom: 0rem;
+              padding-bottom: 0.32rem;
+            }
+      
+            @media screen and (max-width: 500px) {
+              width: 11px;
+              margin-bottom: 0rem;
+              padding-bottom: 0.32rem;
+            }
+      
+            @media screen and (max-width: 450px) {
+              width: 10px;
+              padding-bottom: 0.32rem;
+            }
+      
+            @media screen and (max-width: 350px) {
+              width: 11px;
+              padding-bottom: 0.4rem;
+            }
+          }
+        }
+
+        .app__work-longDescription {
+          margin-bottom: 1rem;
+          font-size: 0.9rem;
+          color: var(--white-color);
+          text-shadow: 0.25px 0.5px 2px rgba(0, 0, 0, 0.4);
+          word-wrap: break-word; // Add this line to allow long words to break
+          overflow-wrap: break-word; // Add this line for additional word wrap support
+          white-space: normal; // Add this line to allow wrapping
+
+          @media screen and (max-width: 1050px) {
+            font-size: 0.9rem;
+          }
+    
+          @media screen and (max-width: 800px) {
+            display: none;
+          }
+        }
+    
+        .app__work-shortDescription {
+          margin-bottom: 1rem;
+          font-size: 0.9rem;
+          color: var(--white-color);
+          text-shadow: 0.25px 0.5px 2px rgba(0, 0, 0, 0.4);
+          word-wrap: break-word; // Add this line to allow long words to break
+          overflow-wrap: break-word; // Add this line for additional word wrap support
+          white-space: normal; // Add this line to allow wrapping
+    
+          @media screen and (min-width: 801px) {
+            display: none;
+          }
+    
+          @media screen and (max-width: 650px) {
+            font-size: 0.75rem;
+          }
+    
+          @media screen and (max-width: 500px) {
+            font-size: 0.8rem;
+          }
+    
+          @media screen and (max-width: 450px) {
+            font-size: 0.75rem;
+          }
+    
+          @media screen and (max-width: 350px) {
+            font-size: 0.7rem;
+          }
+        }
+
+        .app__work-languagesList {
+          margin-bottom: 1rem;
+          font-size: 0.9rem;
+          color: var(--white-color);
+          text-shadow: 0.25px 0.5px 2px rgba(0, 0, 0, 0.4);
+          word-wrap: break-word; // Add this line to allow long words to break
+          overflow-wrap: break-word; // Add this line for additional word wrap support
+          white-space: normal; // Add this line to allow wrapping
+
+          @media screen and (max-width: 1050px) {
+            font-size: 0.9rem;
+          }
+    
+          @media screen and (max-width: 800px) {
+            font-size: 0.85rem;
+          }
+    
+          @media screen and (max-width: 650px) {
+            font-size: 0.75rem;
+          }
+    
+          @media screen and (max-width: 500px) {
+            font-size: 0.8rem;
+          }
+    
+          @media screen and (max-width: 450px) {
+            font-size: 0.75rem;
+          }
+    
+          @media screen and (max-width: 350px) {
+            font-size: 0.7rem;
+            display: none;
+          }
+        }
+
+        .app__work-toolsList {
+          margin-bottom: 1rem;
+          font-size: 0.9rem;
+          color: var(--white-color);
+          text-shadow: 0.25px 0.5px 2px rgba(0, 0, 0, 0.4);
+          word-wrap: break-word; // Add this line to allow long words to break
+          overflow-wrap: break-word; // Add this line for additional word wrap support
+          white-space: normal; // Add this line to allow wrapping
+
+          @media screen and (max-width: 1050px) {
+            font-size: 0.9rem;
+          }
+    
+          @media screen and (max-width: 800px) {
+            font-size: 0.85rem;
+          }
+    
+          @media screen and (max-width: 650px) {
+            font-size: 0.75rem;
+          }
+    
+          @media screen and (max-width: 500px) {
+            display: none;
+          }
+        }
+
+        .app__work_github-button {
+          margin-top: -0.65rem;
+
+          @media screen and (max-width: 1050px) {
+            display: none;
+          }
+        }
+    
+        .app__work-subtitle {
+          font-size: 0.93rem;
+          text-align: right;
+          color: var(--white-color);
+          text-shadow: 0.25px 0.5px 2px rgba(0, 0, 0, 0.4);
+          align-self: flex-end; // Align the subtitle to the bottom right
+          margin-top: auto; // Push the subtitle to the bottom
+
+          @media screen and (max-width: 1050px) {
+            font-size: 0.93rem;
+          }
+    
+          @media screen and (max-width: 800px) {
+            font-size: 0.9rem;
+          }
+    
+          @media screen and (max-width: 650px) {
+            font-size: 0.8rem;
+          }
+    
+          @media screen and (max-width: 500px) {
+            font-size: 0.75rem;
+          }
+    
+          @media screen and (max-width: 450px) {
+            font-size: 0.65rem;
+          }
+    
+          @media screen and (max-width: 350px) {
+            font-size: 0.55rem;
+          }
+        }
+      }
+
+      &.hover-active {
+        // Styles for hover when modal is active        
+        border-radius: 0.45rem;
+        transform: scale(1.1);
+      }
+
+      &.active {
+        opacity: 1;
+        transform: scale(1.075);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        z-index: 1;
+        box-shadow: 0.1rem 0.1rem 6px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          box-shadow: 0.05rem 0.05rem 9px rgba(0, 0, 0, 0.7);
+          transform: scale(1.1);
+        }
+      }
+
+      &:not(.active) {
+        filter: blur(2px);
+        opacity: 0.2;
+      }
+    }
+  }
+
+  .app__work-navigation {
+    display: flex;
+    justify-content: center;    
+    margin-top: 0.25rem;
+    margin-bottom: 1.25rem;
+
+    .app__work-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+      background-color: var(--grayGlass-color);
+      filter: drop-shadow(0.25px 0.5px 2px rgba(0,0,0,0.4));
+
+      @media screen and (max-width: 450px) {
+        width: 9px;
+        height: 9px;
+      }
+
+      &.active {
+        background-color: var(--offWhiteGlass-color); // Change this color as needed
+      }
+    }
+  }
+  
+  .app__work-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 0.45rem;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 3;
+  }
+
+  .app__work-content {
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+
+    h4 {
+      margin-top: 1rem;
+      line-height: 1.5;
+
+      @media screen and (min-width: 2000px) {
+        margin-top: 3rem;
+      }
+    }
+
+    .app__work-titles {
+      padding: 0.5rem 1rem;
+      top: -45px;
+    }
+  }
+}
+
+.app__work-selected {
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Align items vertically */
+  padding-bottom: 0.25rem;
+  padding-top: 0.3rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  //border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: 800;
+  text-shadow: 0.25px 0.5px 2px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown-icon {
+  width: auto;
+  height: 100%; /* Set height to 100% to match the text height */
+  margin-left: 1rem; /* Add some margin for spacing */
+  img {
+    width: 12px; /* Adjust the width of the triangle icon */
+    height: 100%;
+  }
+}
+
+.app__work-dropdown {
+  position: relative;
+}
+
+.app__work-options {
+  position: absolute;
+  top: calc(100% + 0.05px); /* Adjust the spacing between the dropdown and options */
+  width: 100%;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.93);
+  backdrop-filter: blur(3px);
+  border: 0.25px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0.25rem 0.25rem 6px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  z-index: 2;
+
+  div {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+  }
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background: rgba(30, 30, 30, 0.8);
+  backdrop-filter: blur(1.2px);
+  z-index: 1;
+  cursor: pointer;
+}

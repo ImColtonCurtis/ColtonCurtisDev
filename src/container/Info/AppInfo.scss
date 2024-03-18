@@ -1,0 +1,489 @@
+@keyframes info-title-background-pan {
+    from {
+        background-position: 0% center;
+    }
+  
+    to {
+        background-position: -200% center;
+    }
+  }
+
+  .github-button {
+    background: transparent; /* Set background to transparent */
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 0;
+
+  }
+
+  .github-button-image {
+    width: 40px; /* Limit the width to 20 pixels */
+    height: auto;
+    margin-top: 0.65rem;
+    margin-left: 0.25rem;      
+    filter: drop-shadow(0.25px 0.5px 2px rgba(0,0,0,0.4));
+  }
+
+  .app__work_github-button { 
+    z-index: 2;   
+  }
+  
+  .app__info {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    max-height: 97svh;
+    min-height: 97svh;
+    max-width: 940px;
+    top: 1.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--offBlackGlass-color);   
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+  
+    @media screen and (min-width: 2000px) {
+      max-width: 50.5%;
+      max-height: 97.8svh;
+    }
+  
+    @media screen and (max-width: 1000px) {
+      max-width: 97.75%;
+      max-height: 97.7svh;
+    }
+  
+    border-radius: 0.95rem;
+    box-shadow: 0.5px 0.5px 15px rgba(0, 0, 0, 0.5);
+  
+    .app__info-videoDetails {
+      position: relative;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-radius: 0.75rem;
+    
+      overflow-y: auto;
+      overflow-x: hidden;
+    
+      .app__info-video {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      
+          // move the video and hover code to the below class
+          .app__info-header-video {
+            max-width: 100%;
+            width: 80%;
+            height: 80%;
+            object-fit: cover;
+            position: relative;
+      
+            border-radius: 3.25rem;
+            box-shadow: 0.1rem 0.1rem 6px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease-in-out;
+            z-index: 2;
+
+            &:hover {
+              cursor: crosshair;
+              transform: scale(1.045);
+              z-index: 2; 
+              box-shadow: 0.05rem 0.05rem 9px rgba(0, 0, 0, 0.7);
+            }
+          }
+
+          .app__info-ambient-video {
+            position: absolute;
+            align-self: center;
+            margin-top: 5rem;
+            filter: blur(100px);
+            width: 104%;
+            aspect-ratio: 16 / 9;
+            opacity: 0.5;
+            z-index: 1;
+          }
+      
+          .exit-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            background: none; /* Remove the background */
+            border: none; /* Remove the border */
+            z-index: 99; /* Ensure the exit button appears above other elements */
+            filter: drop-shadow(0px 0.5px 1.5px rgba(0, 0, 0, 0.5));
+      
+            img {
+              width: 36px;
+              height: auto;
+            }
+          }
+      }    
+    }
+  
+    .app__info-mainTitle {
+      position: relative;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 0.75rem;
+    
+      overflow-y: auto;
+      overflow-x: hidden;  
+    }
+  }
+  
+  .sdb_title-subtitle-line {
+    width: 80px;
+    height: 1px;
+    background-color: #fff; // Change the color to match your design
+    margin-top: 3px;
+  }
+
+  .ccd_title-subtitle-line {
+    width: 95px;
+    height: 1px;
+    background-color: #fff; // Change the color to match your design
+    margin-top: 3px;
+  }
+  
+  .info-centered-text-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    margin-top: 0.2rem;
+    margin-bottom: 0.1rem;
+    max-width: 600px;
+  
+    @media screen and (min-width: 2000px) {
+      max-width: 850px;
+    }
+  
+    @media screen and (max-width: 1200px) {
+      max-width: 480px;
+    }
+  
+    @media screen and (max-width: 800px) {
+      max-width: 350px;
+    }
+    
+    @media screen and (max-width: 600px) {
+      padding-left: 2rem;
+    }
+  
+    @media screen and (max-width: 500px) {
+      max-width: 300px;
+    }
+  
+    @media screen and (max-width: 450px) {
+      padding-left: 1.25rem;
+    }
+  }
+  
+  .info-text-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    
+    padding-top: 0.1rem;
+    margin-left: 7.25rem;
+    margin-bottom: 4rem;
+    max-width: 600px;
+  
+    @media screen and (min-width: 2000px) {
+      max-width: 850px;
+    }
+  
+    @media screen and (max-width: 940px) {
+      max-width: 550px;
+    }
+  
+    @media screen and (max-width: 850px) {
+      max-width: 500px;
+    }
+  
+    @media screen and (max-width: 750px) {
+      max-width: 450px;
+    }
+  
+    @media screen and (max-width: 650px) {    
+      margin-left: 6rem;
+      max-width: 375px;
+    }
+    
+    @media screen and (max-width: 550px) {
+      margin-left: 4.5rem;
+      max-width: 330px;
+    }
+  
+    @media screen and (max-width: 500px) {
+      margin-left: 4rem;
+    }
+  
+    @media screen and (max-width: 450px) {
+      margin-left: 3.5rem;
+      max-width: 300px;
+    }
+  
+    @media screen and (max-width: 400px) {
+      margin-left: 3.25rem;
+      max-width: 250px;
+    }
+  
+    @media screen and (max-width: 350px) {
+      margin-left: 3rem;
+      max-width: 230px;
+    }
+  
+    @media screen and (max-width: 300px) {
+      margin-left: 2.5rem;
+      max-width: 210px;
+    }
+  
+    @media screen and (max-width: 300px) {
+      margin-left: 2rem;
+      max-width: 180px;
+    }
+
+    
+    
+  }
+  
+  .info-descriptionHeader-text {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--white-color);
+    text-shadow: 0.25px 0.5px 2px rgba(0, 0, 0, 0.4);
+    margin-top: 0.6rem;
+  
+    @media screen and (min-width: 2000px) {
+      font-size: 1.7rem;
+    }
+  
+    @media screen and (max-width: 1000px) {
+      font-size: 1.25rem;
+    }
+  
+    @media screen and (max-width: 450px) {
+      font-size: 1.2rem;
+    }
+  
+    @media screen and (max-width: 450px) {
+      font-size: 1.05rem;
+    }
+  
+    @media screen and (max-width: 350px) {
+      font-size: 0.95rem;
+    }
+  
+    @media screen and (max-width: 300px) {
+      font-size: 1.2rem;
+    }
+  }
+  
+  .info-mainTitle-text {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--white-color);
+    margin-top: 0.6rem;
+  
+    animation: work-title-background-pan 2s linear infinite;
+    // set up a color source from somewhere
+    background: linear-gradient(
+      to right,
+      rgb(255, 142, 255),
+      rgb(71, 255, 178),
+      rgb(196, 133, 255),
+      rgb(255, 142, 255),
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text; /* Standard property for compatibility */
+    -webkit-text-fill-color: transparent;
+  
+    @media screen and (min-width: 2000px) {
+      font-size: 1.7rem;
+    }
+  
+    @media screen and (max-width: 1000px) {
+      font-size: 1.25rem;
+    }
+  
+    @media screen and (max-width: 450px) {
+      font-size: 1.35rem;
+    }
+  }
+
+  .choo-mainTitle-text {
+    background: linear-gradient(
+      to right,
+      rgb(255, 142, 255),
+      rgb(71, 255, 178),
+      rgb(196, 133, 255),
+      rgb(255, 142, 255),
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text; /* Standard property for compatibility */
+    -webkit-text-fill-color: transparent;
+  }
+
+  .coltonCurtisDev-mainTitle-text {
+    background: linear-gradient(
+      to right,
+      rgb(0, 247, 255),
+      rgb(255, 246, 165),
+      rgb(255, 22, 22),
+      rgb(0, 247, 255),
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text; /* Standard property for compatibility */
+    -webkit-text-fill-color: transparent;
+  }
+
+  .crab-mainTitle-text {
+    background: linear-gradient(
+      to right,
+      rgb(118, 255, 248),
+      rgb(255, 246, 165),
+      rgb(151, 255, 169),
+      rgb(118, 255, 248),
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text; /* Standard property for compatibility */
+    -webkit-text-fill-color: transparent;
+  }
+
+  .ding-mainTitle-text {
+    background: linear-gradient(
+      to right,
+      rgb(235, 235, 235),
+      rgb(139, 141, 140),
+      rgb(245, 220, 192),
+      rgb(235, 235, 235),
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text; /* Standard property for compatibility */
+    -webkit-text-fill-color: transparent;
+  }
+
+  .drop-mainTitle-text {
+    background: linear-gradient(
+      to right,
+      rgb(1, 225, 255),
+      rgb(201, 182, 253),
+      rgb(116, 255, 186),
+      rgb(255, 179, 116),
+      rgb(1, 225, 255),
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text; /* Standard property for compatibility */
+    -webkit-text-fill-color: transparent;
+  }
+
+  .flap-mainTitle-text {
+    background: linear-gradient(
+      to right,
+      rgb(170, 245, 255),
+      rgb(255, 166, 228),
+      rgb(189, 255, 128),
+      rgb(170, 245, 255),
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text; /* Standard property for compatibility */
+    -webkit-text-fill-color: transparent;
+  }
+
+  .letsGetHigh-mainTitle-text {
+    background: linear-gradient(
+        to right,
+        rgb(255, 147, 58),
+        rgb(108, 201, 255),
+        rgb(177, 156, 255),
+        rgb(255, 147, 58),
+      );
+      background-size: 200%;
+      -webkit-background-clip: text;
+      background-clip: text; /* Standard property for compatibility */
+      -webkit-text-fill-color: transparent;
+  }
+
+  .paperPlanes-mainTitle-text {
+    background: linear-gradient(
+        to right,
+        rgb(255, 0, 255),
+        rgb(237, 255, 71),
+        rgb(169, 78, 255),
+        rgb(255, 0, 255),
+      );
+      background-size: 200%;
+      -webkit-background-clip: text;
+      background-clip: text; /* Standard property for compatibility */
+      -webkit-text-fill-color: transparent;
+  }
+  
+  .info-subtitle-text {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--white-color);
+    text-shadow: 0.25px 0.5px 2px rgba(0, 0, 0, 0.4);
+    margin-top: 0.6rem;
+  
+    @media screen and (min-width: 2000px) {
+      font-size: 1.7rem;
+    }
+  
+    @media screen and (max-width: 1000px) {
+      font-size: 1.25rem;
+    }
+  
+    @media screen and (max-width: 450px) {
+      font-size: 1.35rem;
+    }
+  }
+  
+  .longDescription-text {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+    color: var(--white-color);
+    text-shadow: 0.25px 0.5px 2px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  
+    @media screen and (min-width: 2000px) {
+      font-size: 1.3rem;
+    }
+  
+    @media screen and (max-width: 1000px) {
+      font-size: 1.0rem;
+    }
+  
+    @media screen and (max-width: 450px) {
+      margin-top: 0.31rem;
+    }
+  }
+  
