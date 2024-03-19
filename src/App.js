@@ -52,17 +52,17 @@ const App = () => {
         </Helmet>
 
         <Routes>
-          <Route exact path="/ColtonCurtisDev" element={<AppContent toggleModal={toggleModal} modal={modal} />} />
-          <Route path="/ColtonCurtisDev/choo-info" element={<ChooInfo  toggleModal={toggleModal}/>} />
-          <Route path="/ColtonCurtisDev/coltonCurtisDev-info" element={<ColtonCurtisDevInfo  toggleModal={toggleModal}/>} />
-          <Route path="/ColtonCurtisDev/crab-info" element={<CrabInfo  toggleModal={toggleModal}/>} />
-          <Route path="/ColtonCurtisDev/ding-info" element={<DingInfo  toggleModal={toggleModal}/>} />
-          <Route path="/ColtonCurtisDev/drop-info" element={<DropInfo  toggleModal={toggleModal}/>} />
-          <Route path="/ColtonCurtisDev/flap-info" element={<FlapInfo  toggleModal={toggleModal}/>} />
-          <Route path="/ColtonCurtisDev/letsGetHigh-info" element={<LetsGetHighInfo  toggleModal={toggleModal}/>} />
-          <Route path="/ColtonCurtisDev/paperPlanes-info" element={<PaperPlanesInfo  toggleModal={toggleModal}/>} />
-          <Route path="/ColtonCurtisDev/privacy-policy" element={<PrivacyContent currentPage={currentPage} modal={modal}/>} />          
-          <Route path="/ColtonCurtisDev/terms-of-use" element={<TermsContent currentPage={currentPage} modal={modal}/>} />
+          <Route exact path="/" element={<AppContent toggleModal={toggleModal} modal={modal} />} />
+          <Route path="/choo-info" element={<ChooInfo  toggleModal={toggleModal}/>} />
+          <Route path="/coltonCurtisDev-info" element={<ColtonCurtisDevInfo  toggleModal={toggleModal}/>} />
+          <Route path="/crab-info" element={<CrabInfo  toggleModal={toggleModal}/>} />
+          <Route path="/ding-info" element={<DingInfo  toggleModal={toggleModal}/>} />
+          <Route path="/drop-info" element={<DropInfo  toggleModal={toggleModal}/>} />
+          <Route path="/flap-info" element={<FlapInfo  toggleModal={toggleModal}/>} />
+          <Route path="/letsGetHigh-info" element={<LetsGetHighInfo  toggleModal={toggleModal}/>} />
+          <Route path="/paperPlanes-info" element={<PaperPlanesInfo  toggleModal={toggleModal}/>} />
+          <Route path="/privacy-policy" element={<PrivacyContent currentPage={currentPage} modal={modal}/>} />          
+          <Route path="/terms-of-use" element={<TermsContent currentPage={currentPage} modal={modal}/>} />
 
           {/* Fallback route */}
           <Route path="*" element={<AppContent toggleModal={toggleModal} modal={modal} />} />

@@ -126,7 +126,7 @@ const Navbar = ({ currentPage, modal }) => {
         {['home', 'work', 'about', 'contact'].map((item) => (
           <li className="app__flex p-text" key={`link-${item}`}>
             <div />
-            {location.pathname === '/ColtonCurtisDev' ? (
+            {location.pathname === '/' ? (
               <ScrollLink
                 to={item === 'home' ? 'home' : item.toLowerCase()}
                 onClick={() => handleLinkClick(item.toLowerCase())}
@@ -138,7 +138,7 @@ const Navbar = ({ currentPage, modal }) => {
               </ScrollLink>
             ) : (
               <RouterLink
-                to={{ pathname: '/ColtonCurtisDev', hash: `#${item.toLowerCase()}` }}
+                to={{ pathname: '/', hash: `#${item.toLowerCase()}` }}
                 className="scroll-link"
                 onClick={() => handleLinkClick(item.toLowerCase())}
               >
@@ -171,9 +171,9 @@ const Navbar = ({ currentPage, modal }) => {
             <ul>
             {['home', 'work', 'about', 'contact'].map((item, index) => (
                 <motion.li key={item} className={listClass}>
-                  {location.pathname === '/ColtonCurtisDev' ? (
+                  {location.pathname === '/' ? (
                     <ScrollLink
-                      to={item === 'home' ? '/ColtonCurtisDev' : `/ColtonCurtisDev/${item.toLowerCase()}`}
+                      to={item === 'home' ? '/' : `/${item.toLowerCase()}`}
                       onClick={() => handleLinkClick(item.toLowerCase())}
                       smooth={true}
                       duration={500}
@@ -182,7 +182,7 @@ const Navbar = ({ currentPage, modal }) => {
                       {item}
                     </ScrollLink>
                   ) : (
-                    <RouterLink to="/ColtonCurtisDev" className="scroll-link">
+                    <RouterLink to="/" className="scroll-link">
                       {item}
                     </RouterLink>
                   )}
