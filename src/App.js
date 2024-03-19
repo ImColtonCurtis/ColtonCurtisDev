@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Blob, Header, Work, About, Contact, Footer, Privacy, Terms, ChooInfo, ColtonCurtisDevInfo, CrabInfo, DingInfo, DropInfo, FlapInfo, LetsGetHighInfo, PaperPlanesInfo } from './container';
 import { Navbar } from './components';
 import './App.scss';
-//<Blob />
+
 const AppContent = ({ currentPage, toggleModal, modal }) => (
   <div className="app">
     <Blob />
@@ -65,10 +65,10 @@ const App = () => {
           <Route path="/ColtonCurtisDev/terms-of-use" element={<TermsContent currentPage={currentPage} modal={modal}/>} />
 
           {/* Fallback route */}
-          <Route path="/ColtonCurtisDev/*" element={<AppContent toggleModal={toggleModal} modal={modal} />} />
+          <Route path="*" element={<AppContent toggleModal={toggleModal} modal={modal} />} />
         </Routes>       
       </div>
-      </Router>
+    </Router>
   );
 };
 
