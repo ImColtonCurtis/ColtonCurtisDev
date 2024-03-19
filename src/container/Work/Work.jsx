@@ -1,10 +1,18 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, lazy, Suspense } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { images, videos } from '../../constants';
-import { ChooInfo, ColtonCurtisDevInfo, CrabInfo, DingInfo, DropInfo, FlapInfo, LetsGetHighInfo, PaperPlanesInfo } from '../../container';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import './Work.scss';
+
+const ChooInfo = lazy(() => import('../../container/Info/ChooInfo'));
+const ColtonCurtisDevInfo = lazy(() => import('../../container/Info/ColtonCurtisDevInfo'));
+const CrabInfo = lazy(() => import('../../container/Info/CrabInfo'));
+const DingInfo = lazy(() => import('../../container/Info/DingInfo'));
+const DropInfo = lazy(() => import('../../container/Info/DropInfo'));
+const FlapInfo = lazy(() => import('../../container/Info/FlapInfo'));
+const LetsGetHighInfo = lazy(() => import('../../container/Info/LetsGetHighInfo'));
+const PaperPlanesInfo = lazy(() => import('../../container/Info/PaperPlanesInfo'));
 
 const works = [
     { title: 'choo', 
@@ -90,6 +98,7 @@ const works = [
 ];
 
 const Work = ({ toggleModal, modal }) => {
+  // State variables
   const [filterWork, setFilterWork] = useState([]);
   const [selectedPlatform, setSelectedPlatform] = useState('Platforms');
   const [showDropdown, setShowDropdown] = useState(false);
@@ -97,6 +106,7 @@ const Work = ({ toggleModal, modal }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [intervalId, setIntervalId] = useState(null);
 
+  // Refs
   const containerRef = useRef(null);
   const dragStartX = useRef(null);
   const isDragging = useRef(false);
@@ -461,24 +471,27 @@ const Work = ({ toggleModal, modal }) => {
             />
           ))}
       </div>
-      {modal && selectedGame && (
-      <div className="app__info-modal">
-        <div
-          onClick={() => {
-            toggleModal();
-          }}
-          className={`overlay`}
-        ></div>
-        {selectedGame === 'choo' && <ChooInfo toggleModal={toggleModal} />}
-        {selectedGame === 'coltoncurtis.dev' && <ColtonCurtisDevInfo toggleModal={toggleModal} />}
-        {selectedGame === 'crab' && <CrabInfo toggleModal={toggleModal} />}
-        {selectedGame === 'ding' && <DingInfo toggleModal={toggleModal} />}
-        {selectedGame === 'drop' && <DropInfo toggleModal={toggleModal} />}
-        {selectedGame === 'flap' && <FlapInfo toggleModal={toggleModal} />}
-        {selectedGame === 'Lets Get High 3' && <LetsGetHighInfo toggleModal={toggleModal} />}
-        {selectedGame === 'Paper Planes 3D' && <PaperPlanesInfo toggleModal={toggleModal} />}
-      </div>
-      )}
+      <Suspense fallback={<div>Loading...</div>}>
+        {/* Lazy loaded components */}
+        {modal && selectedGame && (
+          <div className="app__info-modal">
+            <div
+              onClick={() => {
+                toggleModal();
+              }}
+              className={`overlay`}
+            ></div>
+            {selectedGame === 'choo' && <ChooInfo toggleModal={toggleModal} />}
+            {selectedGame === 'coltoncurtis.dev' && <ColtonCurtisDevInfo toggleModal={toggleModal} />}
+            {selectedGame === 'crab' && <CrabInfo toggleModal={toggleModal} />}
+            {selectedGame === 'ding' && <DingInfo toggleModal={toggleModal} />}
+            {selectedGame === 'drop' && <DropInfo toggleModal={toggleModal} />}
+            {selectedGame === 'flap' && <FlapInfo toggleModal={toggleModal} />}
+            {selectedGame === 'Lets Get High 3' && <LetsGetHighInfo toggleModal={toggleModal} />}
+            {selectedGame === 'Paper Planes 3D' && <PaperPlanesInfo toggleModal={toggleModal} />}
+          </div>
+        )}
+      </Suspense>
     </>
   );
 };

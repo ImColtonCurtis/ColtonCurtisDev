@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { lazy , Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { videos } from '../../constants';
 import './About.scss';
 
+
+
 const About = () => {
+  // Inline lazy-loaded video component
+  const LazyVideo = () => (
+    <video
+      src={videos.profileVideo}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      alt="software Developer"
+    />
+  );
+
   return (
     <div id="about" className="app__about app_flex">
       <div className="app__about-header">
@@ -151,16 +166,9 @@ const About = () => {
           </div>
         </div>
         <div className="app__about-skills-right">
-          <video
-            src={videos.profileVideo}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            //className="app__info-ambient-video"
-            alt="software Developer"
-          />
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyVideo />
+          </Suspense>
         </div>
       </div>
     </div>

@@ -5,9 +5,10 @@ import { Blob, Header, Work, About, Contact, Footer, Privacy, Terms, ChooInfo, C
 import { Navbar } from './components';
 import './App.scss';
 
+// <Blob />
+
 const AppContent = ({ currentPage, toggleModal, modal }) => (
   <div className="app">
-    <Blob />
     <Navbar currentPage={currentPage} modal={modal}/>
     <Header/>
     <Work toggleModal={toggleModal} modal={modal}/>
