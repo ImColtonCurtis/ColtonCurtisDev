@@ -65,7 +65,7 @@ const App = () => {
           <Route path="/ColtonCurtisDev/terms-of-use" element={<TermsContent currentPage={currentPage} modal={modal}/>} />
 
           {/* Fallback route */}
-          <Route path="*" element={<AppContent toggleModal={toggleModal} modal={modal} />} />
+          <Route path="/ColtonCurtisDev/*" element={<AppContent toggleModal={toggleModal} modal={modal} />} />
         </Routes>       
       </div>
       </Router>
