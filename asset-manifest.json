@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ColtonCurtisDev/static/css/main.8582cd81.css",
-    "main.js": "/ColtonCurtisDev/static/js/main.1eb19b9c.js",
+    "main.css": "/ColtonCurtisDev/static/css/main.56015817.css",
+    "main.js": "/ColtonCurtisDev/static/js/main.e8e2be1a.js",
     "static/media/letsGetHighPreview.mp4": "/ColtonCurtisDev/static/media/letsGetHighPreview.c69377db8d4fb37a663f.mp4",
     "static/media/dropPreview.mp4": "/ColtonCurtisDev/static/media/dropPreview.d562ec3b292ae3cb10fa.mp4",
     "static/media/paperPlanesPreview.mp4": "/ColtonCurtisDev/static/media/paperPlanesPreview.f23295cf74fce8722fb7.mp4",
@@ -22,11 +22,11 @@
     "static/media/flapThumbnail.mp4": "/ColtonCurtisDev/static/media/flapThumbnail.9b0aeed1054723da40a2.mp4",
     "static/media/about04.png": "/ColtonCurtisDev/static/media/about04.fa7b3a72ed32b0e25bfb.png",
     "index.html": "/ColtonCurtisDev/index.html",
-    "main.8582cd81.css.map": "/ColtonCurtisDev/static/css/main.8582cd81.css.map",
-    "main.1eb19b9c.js.map": "/ColtonCurtisDev/static/js/main.1eb19b9c.js.map"
+    "main.56015817.css.map": "/ColtonCurtisDev/static/css/main.56015817.css.map",
+    "main.e8e2be1a.js.map": "/ColtonCurtisDev/static/js/main.e8e2be1a.js.map"
   },
   "entrypoints": [
-    "static/css/main.8582cd81.css",
-    "static/js/main.1eb19b9c.js"
+    "static/css/main.56015817.css",
+    "static/js/main.e8e2be1a.js"
   ]
 }
