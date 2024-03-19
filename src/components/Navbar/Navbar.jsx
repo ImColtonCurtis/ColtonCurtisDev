@@ -123,30 +123,30 @@ const Navbar = ({ currentPage, modal }) => {
   return (
     <nav className={`app__navbar ${isMenuOpen ? 'app__navbar-menu-open' : ''} ${modal ? 'app__navbar-disabled' : ''}`} style={navbarBg}>
       <ul className={`app__navbar-links ${modal ? 'disabled' : ''}`}>
-        {['home', 'work', 'about', 'contact'].map((item) => (
-          <li className="app__flex p-text" key={`link-${item}`}>
-            <div />
-            {location.pathname === '/' ? (
-              <ScrollLink
-                to={item === 'home' ? 'home' : item.toLowerCase()}
-                onClick={() => handleLinkClick(item.toLowerCase())}
-                smooth={true}
-                duration={500}
-                offset={item === 'home' ? 0 : -navbarHeight} // Set the offset to 0 for the home section
-              >
-                {item}
-              </ScrollLink>
-            ) : (
-              <RouterLink
-                to={{ pathname: '/', hash: `${item.toLowerCase()}` }}
-                className="scroll-link"
-                onClick={() => handleLinkClick(item.toLowerCase())}
-              >
-                {item}
-              </RouterLink>
-            )}
-          </li>
-        ))}
+      {['home', 'work', 'about', 'contact'].map((item) => (
+        <li className="app__flex p-text" key={`link-${item}`}>
+          <div />
+          {location.pathname === '/' ? (
+            <ScrollLink
+              to={item === 'home' ? 'home' : item.toLowerCase()}
+              onClick={() => handleLinkClick(item.toLowerCase())}
+              smooth={true}
+              duration={500}
+              offset={item === 'home' ? 0 : -navbarHeight} // Set the offset to 0 for the home section
+            >
+              {item}
+            </ScrollLink>
+          ) : (
+            <RouterLink
+              to={`/${item.toLowerCase()}`}
+              className="scroll-link"
+              onClick={() => handleLinkClick(item.toLowerCase())}
+            >
+              {item}
+            </RouterLink>
+          )}
+        </li>
+      ))}
       </ul>
 
       <div className={`app__navbar-menu ${modal ? 'disabled' : ''}`} id="app__navbar-menu">
