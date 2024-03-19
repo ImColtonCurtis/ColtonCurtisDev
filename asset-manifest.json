@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ColtonCurtisDev/static/css/main.d24c4d33.css",
-    "main.js": "/ColtonCurtisDev/static/js/main.e8e2be1a.js",
+    "main.js": "/ColtonCurtisDev/static/js/main.ea087939.js",
     "static/media/letsGetHighPreview.mp4": "/ColtonCurtisDev/static/media/letsGetHighPreview.c69377db8d4fb37a663f.mp4",
     "static/media/dropPreview.mp4": "/ColtonCurtisDev/static/media/dropPreview.d562ec3b292ae3cb10fa.mp4",
     "static/media/paperPlanesPreview.mp4": "/ColtonCurtisDev/static/media/paperPlanesPreview.f23295cf74fce8722fb7.mp4",
@@ -23,10 +23,10 @@
     "static/media/about04.png": "/ColtonCurtisDev/static/media/about04.fa7b3a72ed32b0e25bfb.png",
     "index.html": "/ColtonCurtisDev/index.html",
     "main.d24c4d33.css.map": "/ColtonCurtisDev/static/css/main.d24c4d33.css.map",
-    "main.e8e2be1a.js.map": "/ColtonCurtisDev/static/js/main.e8e2be1a.js.map"
+    "main.ea087939.js.map": "/ColtonCurtisDev/static/js/main.ea087939.js.map"
   },
   "entrypoints": [
     "static/css/main.d24c4d33.css",
-    "static/js/main.e8e2be1a.js"
+    "static/js/main.ea087939.js"
   ]
 }
