@@ -138,7 +138,7 @@ const Navbar = ({ currentPage, modal }) => {
               </ScrollLink>
             ) : (
               <RouterLink
-                to={{ pathname: '/', hash: `#${item.toLowerCase()}` }}
+                to={{ pathname: '/', hash: `${item.toLowerCase()}` }}
                 className="scroll-link"
                 onClick={() => handleLinkClick(item.toLowerCase())}
               >
