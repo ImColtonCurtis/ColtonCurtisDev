@@ -173,7 +173,7 @@ const Navbar = ({ currentPage, modal }) => {
                 <motion.li key={item} className={listClass}>
                   {location.pathname === '/ColtonCurtisDev' ? (
                     <ScrollLink
-                      to={item === 'home' ? 'home' : item.toLowerCase()}
+                      to={item === 'home' ? '/ColtonCurtisDev' : `/ColtonCurtisDev/${item.toLowerCase()}`}
                       onClick={() => handleLinkClick(item.toLowerCase())}
                       smooth={true}
                       duration={500}
@@ -182,7 +182,7 @@ const Navbar = ({ currentPage, modal }) => {
                       {item}
                     </ScrollLink>
                   ) : (
-                    <RouterLink to="/" className="scroll-link">
+                    <RouterLink to="/ColtonCurtisDev" className="scroll-link">
                       {item}
                     </RouterLink>
                   )}

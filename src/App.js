@@ -52,7 +52,7 @@ const App = () => {
         </Helmet>
 
         <Routes>
-          <Route path="/ColtonCurtisDev" element={<AppContent toggleModal={toggleModal} modal={modal} />} />
+          <Route exact path="/ColtonCurtisDev" element={<AppContent toggleModal={toggleModal} modal={modal} />} />
           <Route path="/ColtonCurtisDev/choo-info" element={<ChooInfo  toggleModal={toggleModal}/>} />
           <Route path="/ColtonCurtisDev/coltonCurtisDev-info" element={<ColtonCurtisDevInfo  toggleModal={toggleModal}/>} />
           <Route path="/ColtonCurtisDev/crab-info" element={<CrabInfo  toggleModal={toggleModal}/>} />
@@ -63,6 +63,9 @@ const App = () => {
           <Route path="/ColtonCurtisDev/paperPlanes-info" element={<PaperPlanesInfo  toggleModal={toggleModal}/>} />
           <Route path="/ColtonCurtisDev/privacy-policy" element={<PrivacyContent currentPage={currentPage} modal={modal}/>} />          
           <Route path="/ColtonCurtisDev/terms-of-use" element={<TermsContent currentPage={currentPage} modal={modal}/>} />
+
+          {/* Fallback route */}
+          <Route path="*" element={<AppContent toggleModal={toggleModal} modal={modal} />} />
         </Routes>       
       </div>
       </Router>
