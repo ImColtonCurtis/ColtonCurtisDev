@@ -115,8 +115,11 @@ const Work = ({ toggleModal, modal }) => {
 
   useEffect(() => {
     // Pause all videos first
-    Object.values(videoRefs.current).forEach(video => {
-      video.pause();
+    filterWork.forEach(work => {
+      const video = videoRefs.current[work.title];
+      if (video) {
+        video.pause();
+      }
     });
   
     // Play the video of the active work item
@@ -125,6 +128,26 @@ const Work = ({ toggleModal, modal }) => {
       activeVideo.play();
     }
   }, [activeIndex, filterWork]);
+
+  useEffect(() => {
+    const handleKeyUp = (event) => {
+      if (modal && event.key === 'Escape') {
+        toggleModal();
+      }
+    };
+    document.addEventListener('keyup', handleKeyUp);
+    return () => {
+      document.removeEventListener('keyup', handleKeyUp);
+    };
+  }, [toggleModal]);
+
+  useEffect(() => {
+    if (modal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [modal]);
 
   const handleWorkFilter = useCallback((item) => {
     setSelectedPlatform((prevSelectedPlatform) => {
@@ -301,7 +324,7 @@ const Work = ({ toggleModal, modal }) => {
   };
 
   const dropdownWidth = Math.max(
-    ...['Platforms', 'All', 'Mobile', 'PC/Mac', 'Web'].map((item) => item.length)
+    ...['Platforms', 'All', 'Mobile', 'Web'].map((item) => item.length)
   );
 
   useEffect(() => {
@@ -336,6 +359,7 @@ const Work = ({ toggleModal, modal }) => {
     <>
       <div id="work" className="app__work-header app__flex">
         <h2 className="header-text">My Projects</h2>
+        
         <div className="app__work-dropdown" ref={dropdownRef}>
           <div className="app__work-selected" onClick={toggleDropdown}>
             {selectedPlatform}
@@ -351,6 +375,7 @@ const Work = ({ toggleModal, modal }) => {
             </div>
           )}
         </div>
+          
       </div>
 
       <motion.div

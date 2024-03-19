@@ -18,6 +18,7 @@ const Blob = () => {
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
+      cancelAnimationFrame(animationIdRef.current); // Cleanup animation frame
     };
   }, []);
 
@@ -32,7 +33,7 @@ const Blob = () => {
 
     animationIdRef.current = requestAnimationFrame(updatePosition);
 
-    return () => cancelAnimationFrame(animationIdRef.current);
+    return () => cancelAnimationFrame(animationIdRef.current); // Cleanup animation frame
   }, [targetPosition]);
 
   return (

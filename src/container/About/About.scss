@@ -140,7 +140,7 @@
       margin-left: -2rem;
       width: 125%;
       height: 50%;
-      opacity: 0.7;
+      opacity: 0.75;
     }
 
     .app__about-second-item:hover > .app__about-ambient-background {
@@ -148,7 +148,7 @@
       margin-left: -2rem;
       width: 125%;
       height: 50%;
-      opacity: 0.7;
+      opacity: 0.75;
     }
 
     .app__about-third-item:hover > .app__about-ambient-background {
@@ -156,7 +156,7 @@
       margin-left: -2rem;
       width: 125%;
       height: 50%;
-      opacity: 0.7;
+      opacity: 0.75;
     }
 
     .app__about-fourth-item:hover > .app__about-ambient-background {
@@ -164,7 +164,7 @@
       margin-left: -2rem;
       width: 34%;
       height: 50%;
-      opacity: 0.7;
+      opacity: 0.75;
 
       @media screen and (max-width: 947px) {
         width: 125%;
@@ -219,14 +219,14 @@
         animation: about-background-pan 2s linear infinite;
         background: linear-gradient(
           to right,
-          rgb(150,0,200),
+          rgb(150, 0, 200),
           rgb(200, 0, 150),
           rgb(250, 0, 100),
           rgb(150, 0, 200)
         );
         background-size: 200%;
         filter: blur(50px);
-        opacity: 0.5;
+        opacity: 0.3;
         z-index: -1;
       }
 
@@ -363,7 +363,7 @@
         );
         background-size: 200%;
         filter: blur(50px);
-        opacity: 0.5;
+        opacity: 0.3;
         z-index: -1;
       }
 
@@ -497,7 +497,7 @@
         );
         background-size: 200%;
         filter: blur(50px);
-        opacity: 0.5;
+        opacity: 0.3;
         z-index: -1;
       }
 
@@ -632,7 +632,7 @@
         );
         background-size: 200%;
         filter: blur(50px);
-        opacity: 0.5;
+        opacity: 0.3;
         z-index: -1;
 
         @media screen and (max-width: 947px) {
@@ -840,7 +840,7 @@
         margin-left: -2rem;
         width: 50%;
         height: 45%;
-        opacity: 0.7;
+        opacity: 0.75;
       }
 
       .app__about-languages:hover > .app__about-ambient-background-tools {
@@ -848,7 +848,7 @@
         margin-left: -2rem;
         width: 35%;
         height: 45%;
-        opacity: 0.7;
+        opacity: 0.75;
       }
 
       .app__about-languages {        
@@ -907,7 +907,7 @@
           );
           background-size: 200%;
           filter: blur(50px);
-          opacity: 0.5;
+          opacity: 0.3;
           z-index: 1;
         }
 
@@ -927,7 +927,7 @@
           );
           background-size: 200%;
           filter: blur(50px);
-          opacity: 0.5;
+          opacity: 0.3;
           z-index: 1;
         }
 
