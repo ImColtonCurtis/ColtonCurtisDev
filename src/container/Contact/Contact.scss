@@ -168,6 +168,8 @@
     transition: all 0.3s ease-in-out;
 
     &:hover {
+      
+      cursor: crosshair;
       transform: scale(1.035);
       box-shadow: 0.05rem 0.05rem 9px rgba(0, 0, 0, 0.7);
     }

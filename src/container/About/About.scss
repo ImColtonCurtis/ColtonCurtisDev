@@ -192,6 +192,7 @@
       overflow: hidden;
             
       &:hover {
+        cursor: crosshair;
         transform: scale(1.1);
         z-index: 2;
         box-shadow: 0.05rem 0.05rem 9px rgba(0, 0, 0, 0.7);
@@ -330,6 +331,7 @@
       overflow: hidden;
             
       &:hover {
+        cursor: crosshair;
         transform: scale(1.1);
         z-index: 2;
         box-shadow: 0.05rem 0.05rem 9px rgba(0, 0, 0, 0.7);
@@ -464,6 +466,7 @@
       overflow: hidden;
             
       &:hover {
+        cursor: crosshair;
         transform: scale(1.1);
         z-index: 2;
         box-shadow: 0.05rem 0.05rem 9px rgba(0, 0, 0, 0.7);
@@ -598,7 +601,8 @@
       z-index: 1;
       overflow: hidden;
             
-      &:hover {
+      &:hover {        
+        cursor: crosshair;
         transform: scale(1.025);
         z-index: 2;
         box-shadow: 0.05rem 0.05rem 9px rgba(0, 0, 0, 0.7);
@@ -882,6 +886,7 @@
         }
               
         &:hover {
+          cursor: crosshair;
           transform: scale(1.05);
           z-index: 2;          
           box-shadow: 0.05rem 0.05rem 9px rgba(0, 0, 0, 0.7);
@@ -994,13 +999,6 @@
           @media screen and (max-width: 600px) {
             //margin-right: 0.65rem;
           }
-    
-          &:hover {
-            cursor: default;
-            //cursor: crosshair;
-            //transform: scale(1.15);
-            //z-index: 2;
-          }
   
           h3 {
             font-size: 1rem;
@@ -1071,7 +1069,7 @@
         width: auto; //100%
         height: auto; //100%
         //object-fit: cover;
-        overflow: hidden;  
+        overflow: hidden;
         max-width: 470px;
         max-height: 370px;
         border-radius: 0.25rem;
@@ -1082,12 +1080,13 @@
         border: 1px solid rgba(255, 255, 255, 0);
         transition: all 0.3s ease-in-out;
         z-index: 1;
+        //cursor: crosshair;
   
         &:hover {
           @media screen and (min-width: 951px) {
-            transform: scale(1.05);
-            z-index: 2;            
-            box-shadow: 0.05rem 0.05rem 9px rgba(0, 0, 0, 0.7);
+            //transform: scale(1.05);
+            //z-index: 2;            
+            //box-shadow: 0.05rem 0.05rem 9px rgba(0, 0, 0, 0.7);
           }
         }
   
