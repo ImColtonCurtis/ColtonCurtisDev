@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { images, videos } from '../../constants';
 import './AppInfo.scss';
@@ -23,6 +23,33 @@ const PaperPlanesInfo = ({ toggleModal }) => {
   const videoSource = gameInfo[0];
   const githubLogoRef = useRef(null);
     
+  // Inline lazy-loaded video component
+  const LazyVideo = () => (
+    <video
+      src={videoSource.vidURL}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      alt="Info Video"      
+      className="app__info-header-video"
+    />
+  );
+
+  const AmbientLazyVideo = () => (
+    <video
+      src={videoSource.vidURL}
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      alt="Ambient Video"
+      className="app__info-ambient-video"
+    />
+  );
+
   return (
     <motion.div 
       className="app__info"
@@ -50,24 +77,12 @@ const PaperPlanesInfo = ({ toggleModal }) => {
               <p className="longDescription-text">{videoSource.subtitle}</p>
             </div>
           </div>
-          <video
-            src={videoSource.vidURL}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            className="app__info-header-video"
-          />
-          <video
-            src={videoSource.vidURL}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            className="app__info-ambient-video"
-          />
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyVideo />
+          </Suspense>
+          <Suspense fallback={<div>Loading...</div>}>
+            <AmbientLazyVideo />
+          </Suspense>
           <button 
             className="exit-button" 
             onClick={toggleModal}

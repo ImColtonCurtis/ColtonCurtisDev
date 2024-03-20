@@ -1,9 +1,7 @@
-import React, { lazy , Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { videos } from '../../constants';
 import './About.scss';
-
-
 
 const About = () => {
   // Inline lazy-loaded video component

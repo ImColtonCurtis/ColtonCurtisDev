@@ -415,7 +415,8 @@ const Work = ({ toggleModal, modal }) => {
                 loop
                 muted
                 playsInline
-                alt={work.title}
+                alt={work.title}                
+                preload="auto"
                 className="app__work-main-video"
               />
               <video
@@ -423,7 +424,8 @@ const Work = ({ toggleModal, modal }) => {
                 autoPlay={false} 
                 loop
                 muted
-                playsInline
+                playsInline                
+                preload="auto"
                 className="app__work-ambient-video"
               />
               <motion.div
