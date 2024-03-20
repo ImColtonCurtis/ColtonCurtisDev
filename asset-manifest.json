@@ -1,32 +1,30 @@
 {
   "files": {
     "main.css": "/ColtonCurtisDev/static/css/main.d24c4d33.css",
-    "main.js": "/ColtonCurtisDev/static/js/main.72e45378.js",
-    "static/media/letsGetHighPreview.mp4": "/ColtonCurtisDev/static/media/letsGetHighPreview.c69377db8d4fb37a663f.mp4",
-    "static/media/dropPreview.mp4": "/ColtonCurtisDev/static/media/dropPreview.d562ec3b292ae3cb10fa.mp4",
-    "static/media/paperPlanesPreview.mp4": "/ColtonCurtisDev/static/media/paperPlanesPreview.f23295cf74fce8722fb7.mp4",
-    "static/media/crabPreview.mp4": "/ColtonCurtisDev/static/media/crabPreview.eb996894b4f104a1f91f.mp4",
-    "static/media/dingPreview.mp4": "/ColtonCurtisDev/static/media/dingPreview.b2bdf816f79f22586bd9.mp4",
-    "static/media/flapPreview.mp4": "/ColtonCurtisDev/static/media/flapPreview.23651ab0f2b80f9e3324.mp4",
-    "static/media/chooPreview.mp4": "/ColtonCurtisDev/static/media/chooPreview.7d24f8581e4ccd4672b1.mp4",
-    "static/media/coltonCurtisPreview.mp4": "/ColtonCurtisDev/static/media/coltonCurtisPreview.790891f8b93c8f94370f.mp4",
-    "static/media/profileVideo.mp4": "/ColtonCurtisDev/static/media/profileVideo.09533691d1ffe22fa625.mp4",
-    "static/media/chooThumbnail.mp4": "/ColtonCurtisDev/static/media/chooThumbnail.ff70badf8470afad3c78.mp4",
-    "static/media/dropThumbnail.mp4": "/ColtonCurtisDev/static/media/dropThumbnail.2a6c870e15172fedde35.mp4",
-    "static/media/letsGetHighThumbnail.mp4": "/ColtonCurtisDev/static/media/letsGetHighThumbnail.62e91696c9d253b9f89b.mp4",
-    "static/media/crabThumbnail.mp4": "/ColtonCurtisDev/static/media/crabThumbnail.3ea5cb0e42d1db78cc50.mp4",
-    "static/media/paperPlanesThumbnail.mp4": "/ColtonCurtisDev/static/media/paperPlanesThumbnail.f79286c6e7c4ed4fbeb1.mp4",
-    "static/media/coltonCurtisThumbnail.mp4": "/ColtonCurtisDev/static/media/coltonCurtisThumbnail.20ca767f06f2b518623e.mp4",
-    "static/media/dingThumbnail.mp4": "/ColtonCurtisDev/static/media/dingThumbnail.10819c7ea7f4f073e6c9.mp4",
-    "static/media/coltonProfile.png": "/ColtonCurtisDev/static/media/coltonProfile.1d0339d2abd92a49ed3d.png",
+    "main.js": "/ColtonCurtisDev/static/js/main.046f75c1.js",
+    "static/media/crabPreview.mp4": "/ColtonCurtisDev/static/media/crabPreview.af0afae5fbae28f8aab9.mp4",
+    "static/media/paperPlanesPreview.mp4": "/ColtonCurtisDev/static/media/paperPlanesPreview.4ff3a290bb2ad1a65135.mp4",
+    "static/media/dropPreview.mp4": "/ColtonCurtisDev/static/media/dropPreview.db9b891a59a5a8d45a59.mp4",
+    "static/media/dingPreview.mp4": "/ColtonCurtisDev/static/media/dingPreview.f8d4c8de806a30bb7aaa.mp4",
+    "static/media/letsGetHighPreview.mp4": "/ColtonCurtisDev/static/media/letsGetHighPreview.5dcaf56c43a3d37971f0.mp4",
+    "static/media/coltonCurtisPreview.mp4": "/ColtonCurtisDev/static/media/coltonCurtisPreview.928d432ca91b6a8426e2.mp4",
+    "static/media/flapPreview.mp4": "/ColtonCurtisDev/static/media/flapPreview.4248c07b36a2695f25bc.mp4",
+    "static/media/profileVideo.mp4": "/ColtonCurtisDev/static/media/profileVideo.2cd5061ca4f4c225e83a.mp4",
+    "static/media/chooPreview.mp4": "/ColtonCurtisDev/static/media/chooPreview.8d838bc819a5180f9e6c.mp4",
     "static/media/flapThumbnail.mp4": "/ColtonCurtisDev/static/media/flapThumbnail.9b0aeed1054723da40a2.mp4",
-    "static/media/about04.png": "/ColtonCurtisDev/static/media/about04.fa7b3a72ed32b0e25bfb.png",
+    "static/media/letsGetHighThumbnail.mp4": "/ColtonCurtisDev/static/media/letsGetHighThumbnail.4631f7609dc6bb36e258.mp4",
+    "static/media/coltonCurtisThumbnail.mp4": "/ColtonCurtisDev/static/media/coltonCurtisThumbnail.205b5580cd8e09c80304.mp4",
+    "static/media/dingThumbnail.mp4": "/ColtonCurtisDev/static/media/dingThumbnail.ce04854cc5bfc642eefe.mp4",
+    "static/media/chooThumbnail.mp4": "/ColtonCurtisDev/static/media/chooThumbnail.cf49de1c59f732991701.mp4",
+    "static/media/paperPlanesThumbnail.mp4": "/ColtonCurtisDev/static/media/paperPlanesThumbnail.dbe7c8d155e3d9712804.mp4",
+    "static/media/dropThumbnail.mp4": "/ColtonCurtisDev/static/media/dropThumbnail.74304f4fbad0a373074e.mp4",
+    "static/media/crabThumbnail.mp4": "/ColtonCurtisDev/static/media/crabThumbnail.f463c84bf260e4b909bb.mp4",
     "index.html": "/ColtonCurtisDev/index.html",
     "main.d24c4d33.css.map": "/ColtonCurtisDev/static/css/main.d24c4d33.css.map",
-    "main.72e45378.js.map": "/ColtonCurtisDev/static/js/main.72e45378.js.map"
+    "main.046f75c1.js.map": "/ColtonCurtisDev/static/js/main.046f75c1.js.map"
   },
   "entrypoints": [
     "static/css/main.d24c4d33.css",
-    "static/js/main.72e45378.js"
+    "static/js/main.046f75c1.js"
   ]
 }
